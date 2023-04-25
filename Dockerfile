@@ -21,8 +21,7 @@ RUN python -m venv /py_ve && \
         /py_ve/bin/pip install -r /tmp/requirements.dev.txt; \
     fi && rm -rf /tmp/ && \
     apk del .tmp-build-deps && \
-    adduser --disabled-password \
-        --no-create-home django-user
+    adduser --disabled-password django-user
 
 ENV PATH="/py_ve/bin:$PATH"
 
